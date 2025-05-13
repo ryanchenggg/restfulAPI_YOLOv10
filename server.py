@@ -78,6 +78,13 @@ def predict():
         
         print(f"收到圖片，尺寸: {img.shape}")
         
+        # 檢查模型是否在GPU上
+        device_info = {
+            "cuda_available": torch.cuda.is_available(),
+            "model_device": str(next(model.parameters()).device) if hasattr(model, 'parameters') else "Unknown"
+        }
+        print(f"設備信息: {device_info}")
+        
         # 進行推論
         start_time = time.time()
         results = model(img)
