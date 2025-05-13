@@ -1,6 +1,11 @@
-# YOLOv10 物件檢測 Restful API 服務
+# YOLOv10 物件檢測 Restful API service
 
 基於 YOLOv10 的物件檢測 API 服務，達到 ≧10 FPS 的推論速度。
+
+## 環境需求
+
+Python 3.10
+NVIDIA GPU + CUDA
 
 ## 安裝步驟
 
